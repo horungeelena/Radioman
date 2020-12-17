@@ -95,4 +95,14 @@ public class RadioTest {
         radio.increaseVolume();
         assertEquals(61,radio.getCurrentVolume());
     }
+    @Test
+    void shouldInitAllArgs() {
+        Radio radio = new Radio(22,25,0,10,100,0,true);
+        assertEquals(22,radio.getCurrentStation());
+        assertEquals(25,radio.getMaxStation());
+        assertEquals(0,radio.getMinStation());
+        assertEquals(10,radio.getCurrentVolume());
+        assertEquals(100,radio.getMaxVolume());
+        assertEquals(0,radio.getMinVolume());
+    }
 }
